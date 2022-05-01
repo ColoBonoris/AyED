@@ -1,4 +1,4 @@
-package p2;
+package estructuras;
 /**
  * Esta clase representa un nodo de la lista enlazada.
  * */

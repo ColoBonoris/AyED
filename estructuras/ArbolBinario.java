@@ -1,4 +1,5 @@
-package p3;
+package estructuras;
+
 
 // import javax.print.attribute.HashPrintJobAttributeSet;
 
@@ -155,7 +156,7 @@ public class ArbolBinario<T> {
 		return nivelesP;
 	}
 
-	public T sumaElementosProfundidad(int p){
+	/*public T sumaElementosProfundidad(int p){
 		ListaEnlazadaGenerica<ListaEnlazadaGenerica<T>> nivelesP = this.listaEntreNiveles(p);
 		ListaEnlazadaGenerica<T> elementosP = new ListaEnlazadaGenerica<T>();
 		for (int i = 1; i == p; i++) {
@@ -166,6 +167,6 @@ public class ArbolBinario<T> {
 			total += elementosP.elemento(i); // hay que ver como hacer esto de la suma general, pero sería así
 		}
 		return total;
-	}
+	}*/
 
 }

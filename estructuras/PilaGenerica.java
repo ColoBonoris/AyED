@@ -1,21 +1,23 @@
-package p2;
+package estructuras;
 
-public class ColaGenerica<T>{
+public class PilaGenerica<T>{
 
     private NodoGenerico<T> tope;
     private ListaEnlazadaGenerica<T> datos;
 
-    public ColaGenerica(){
+    public PilaGenerica(){
         this.datos = new ListaEnlazadaGenerica<T>();
         this.tope = null;
     }
 
-    public void encolar(NodoGenerico<T> n){
-        this.datos.agregarInicio(n.getDato());
-        this.tope = n;
+    public void apilar(T n){
+        this.datos.agregarFinal(n);
+        this.tope = new NodoGenerico<T>();
+        this.tope.setDato(n);
     }
 
-    public void desencolar(){
+    public T desapilar(){
+        T aux = this.tope.getDato();
         this.datos.eliminarEn(this.datos.tamanio());
         if(! this.datos.esVacia()){
             this.tope = new NodoGenerico<T>();
@@ -23,6 +25,7 @@ public class ColaGenerica<T>{
         }
         else
             this.tope = null;
+        return aux;
     }
 
     public boolean esVacia(){

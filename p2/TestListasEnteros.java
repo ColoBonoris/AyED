@@ -1,6 +1,10 @@
 package p2;
 import java.util.Scanner;
 
+import estructuras.ListaDeEnteros;
+import estructuras.ListaDeEnterosConArreglos;
+import estructuras.ListaDeEnterosEnlazada;
+
 public class TestListasEnteros {
 
     public static void Ejercicio_1_2(){

@@ -1,5 +1,7 @@
 package p3;
 
+import estructuras.*;
+
 public class TestArbolesBinarios {
     public static void Ejercicio_3(){
         /*

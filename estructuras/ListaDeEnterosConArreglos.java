@@ -1,4 +1,4 @@
-package p2;
+package estructuras;
 
 public class ListaDeEnterosConArreglos extends ListaDeEnteros {
 	

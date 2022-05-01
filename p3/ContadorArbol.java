@@ -1,14 +1,15 @@
 package p3;
+import estructuras.*;
 
 public class ContadorArbol {
     private ArbolBinario<Integer> arbol;
 
     public ContadorArbol(){
-        
+        arbol = null;
     }
 
     public void agregarNumArbol(int n){
-        agregarNumArbol(arbol,n);
+        agregarNumArbol(this.arbol,n);
     }
 
     private void agregarNumArbol(ArbolBinario<Integer> a, int n){

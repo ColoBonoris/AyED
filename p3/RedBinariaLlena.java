@@ -1,5 +1,7 @@
 package p3;
 
+import estructuras.*;
+
 public class RedBinariaLlena {
     private ArbolBinario<Integer> a;
 

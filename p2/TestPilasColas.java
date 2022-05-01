@@ -1,5 +1,7 @@
 package p2;
 
+import estructuras.*;
+
 public class TestPilasColas {
 
     private static String abiertos = "([{";
