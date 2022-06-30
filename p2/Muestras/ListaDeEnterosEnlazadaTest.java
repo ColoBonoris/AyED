@@ -1,11 +1,11 @@
-package P2;
+package p2.Muestras;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import tp02.ejercicio1.ListaDeEnterosEnlazada;
+import estructuras.listas.ListaDeEnterosEnlazada;
 
 public class ListaDeEnterosEnlazadaTest {
 
