@@ -1,6 +1,6 @@
 package p2;
 
-import estructuras.*;
+import estructuras.pilasColas.PilaGenerica;
 
 public class TestPilasColas {
 

@@ -1,5 +1,7 @@
-package estructuras;
+package estructuras.arboles;
 
+import estructuras.listas.ListaEnlazadaGenerica;
+import estructuras.pilasColas.ColaGenerica;
 
 // import javax.print.attribute.HashPrintJobAttributeSet;
 

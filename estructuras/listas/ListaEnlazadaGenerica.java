@@ -1,10 +1,12 @@
-package estructuras;
+package estructuras.listas;
+
 /**
  * La clase ListaGenericaEnlazada es una ListaGenerica, donde los elementos de
  * la lista (nodos) referencian al siguiente elemento (nodo), por este motivo,
  * la ListaEnlazadaGenerica no tiene limite en la cantidad de elementos que se
  * pueden almacenar.
  * */
+
 public class ListaEnlazadaGenerica<T> extends ListaGenerica<T> {
 	/* primer nodo de la lista, si la lista esta vacia, inicio es null */
 	private NodoGenerico<T> inicio;

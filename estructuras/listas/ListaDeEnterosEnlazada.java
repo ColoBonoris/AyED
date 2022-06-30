@@ -1,5 +1,4 @@
-package estructuras;
-
+package estructuras.listas;
 
 public class ListaDeEnterosEnlazada extends ListaDeEnteros {
 	private NodoEntero inicio;

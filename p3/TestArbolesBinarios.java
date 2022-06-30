@@ -1,6 +1,5 @@
 package p3;
-
-import estructuras.*;
+import estructuras.listas.ListaEnlazadaGenerica;
 
 public class TestArbolesBinarios {
     public static void Ejercicio_3(){

@@ -2,7 +2,7 @@ package p2;
 
 import java.util.Scanner;
 
-import estructuras.ListaEnlazadaGenerica;
+import estructuras.listas.ListaEnlazadaGenerica;
 
 public class TestLIstasGenericas {
     public static void Ejercicio_2_1_2(){

@@ -1,9 +1,9 @@
 package p2;
 import java.util.Scanner;
 
-import estructuras.ListaDeEnteros;
-import estructuras.ListaDeEnterosConArreglos;
-import estructuras.ListaDeEnterosEnlazada;
+import estructuras.listas.ListaDeEnteros;
+import estructuras.listas.ListaDeEnterosConArreglos;
+import estructuras.listas.ListaDeEnterosEnlazada;
 
 public class TestListasEnteros {
 

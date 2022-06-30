@@ -1,5 +1,7 @@
 package p3;
-import estructuras.*;
+
+import estructuras.arboles.ArbolBinario;
+import estructuras.listas.ListaEnlazadaGenerica;
 
 public class ContadorArbol {
     private ArbolBinario<Integer> arbol;
@@ -9,7 +11,8 @@ public class ContadorArbol {
     }
 
     public void agregarNumArbol(int n){
-        agregarNumArbol(this.arbol,n);
+        ArbolBinario<Integer> a = this.arbol;
+        agregarNumArbol(a,n);
     }
 
     private void agregarNumArbol(ArbolBinario<Integer> a, int n){
@@ -18,11 +21,14 @@ public class ContadorArbol {
             a.setDato(n);
         }
         else{
+            ArbolBinario<Integer> a2;
             if(n < a.getDato()){
-                agregarNumArbol(a.getHijoIzquierdo(),n);
+                a2 = a.getHijoIzquierdo();
+                agregarNumArbol(a2,n);
             }
             else{
-                agregarNumArbol(a.getHijoDerecho(),n);
+                a2 = a.getHijoDerecho();
+                agregarNumArbol(a2,n);
             }
         }
     }
