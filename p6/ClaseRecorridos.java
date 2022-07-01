@@ -37,7 +37,6 @@ public class ClaseRecorridos<T> {
             visitados[i] = false;
         }
 
-        lg.comenzar();
         for(i=1;i<=n;i++){
             if(! visitados[i])
                 DFS(lg.elemento(i), g, visitados,recorrido);
@@ -46,7 +45,7 @@ public class ClaseRecorridos<T> {
         return recorrido;
     }
 
-    public void DFS(Vertice<T> v, Grafo<T> g, boolean[] visitados, ListaGenerica<Vertice<T>> recorrido){
+    private void DFS(Vertice<T> v, Grafo<T> g, boolean[] visitados, ListaGenerica<Vertice<T>> recorrido){
         /* 
             dfs (v: vértice)
                 marca[v]:= visitado;
@@ -86,7 +85,7 @@ public class ClaseRecorridos<T> {
         ColaGenerica<Vertice<T>> Q = new ColaGenerica<Vertice<T>>();
         boolean[] visitados = new boolean[n];
 
-        int i;
+        int i, j;
         Vertice <T> v;
 
         lg.comenzar();
@@ -95,7 +94,7 @@ public class ClaseRecorridos<T> {
         recorrido.agregarFinal(u);
         visitados[u.getPosicion()] = true;
 
-        while( ! (lg.fin() | Q.esVacia()) ){
+        while( ! Q.esVacia()){
             u = Q.desencolar();
             ListaGenerica<Arista<T>> lu = g.listaDeAdyacentes(u);
             lu.comenzar();
@@ -105,6 +104,14 @@ public class ClaseRecorridos<T> {
                     visitados[v.getPosicion()] = true;
                     recorrido.agregarFinal(v);
                     Q.encolar(v);
+                }
+            }
+            if(! Q.esVacia()){
+                for(j=1;i<=n;i++){
+                    if(! visitados[i]){
+                        visitados[i] = true;
+                        Q.encolar(g.vertice(i));
+                    }
                 }
             }
         }
