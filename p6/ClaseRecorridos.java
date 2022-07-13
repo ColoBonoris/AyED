@@ -106,11 +106,12 @@ public class ClaseRecorridos<T> {
                     Q.encolar(v);
                 }
             }
-            if(! Q.esVacia()){
-                for(j=1;i<=n;i++){
-                    if(! visitados[i]){
-                        visitados[i] = true;
-                        Q.encolar(g.vertice(i));
+            if(Q.esVacia()){
+                while(! Q.esVacia() && ! lg.fin()){
+                    v = lg.proximo();
+                    if(! visitados[v.getPosicion() - 1]){
+                        Q.encolar(v);
+                        visitados[v.getPosicion() - 1] = true;
                     }
                 }
             }
