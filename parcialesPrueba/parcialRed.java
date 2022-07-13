@@ -1,5 +1,5 @@
 package parcialesPrueba;
 
-public class parcialVirusRed {
+public class parcialRed {
     
 }
