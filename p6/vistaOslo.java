@@ -27,7 +27,6 @@ public class vistaOslo {
         boolean cond = false;
         camino.agregarFinal(v.dato());
         visitados[v.getPosicion() - 1] = true;
-
         // caso fin
         if((v.dato() == destino)&&(peso < maxTiempo)){
             return true;
