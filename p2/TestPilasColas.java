@@ -45,12 +45,12 @@ public class TestPilasColas {
         */
         if(! s.equals("")){
             // Caso no vacío
-            if(aceptados.contains(s[0])){
+            if(aceptados.contains(String. valueOf(s.charAt(0)))){
                 // Caso caracter aceptado
-                if(abiertos.contains(s[0])){
+                if(abiertos.contains(String. valueOf(s.charAt(0)))){
                     // Caso es signo abierto
-                    pila.apilar(s[0]);
-                    return esNormalizado(pila,s.subString(1,s.length()));
+                    pila.apilar(String. valueOf(s.charAt(0)));
+                    return esNormalizado(pila,s.substring(1,s.length()));
                 }
                 else{
                     //Caso es caracter cerrado
@@ -60,7 +60,7 @@ public class TestPilasColas {
                     else{
                         String s0 = pila.desapilar();
                         if(abiertos.indexOf(s0) == cerrados.indexOf(s)){
-                            return esNormalizado(pila,s.subString(1,s.length()));
+                            return esNormalizado(pila,s.substring(1,s.length()));
                         }
                         else{
                             return false;
