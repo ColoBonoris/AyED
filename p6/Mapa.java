@@ -105,9 +105,6 @@ public class Mapa {
         ListaGenerica<Vertice<String>> lv = mapaCiudades.listaDeVertices();
         boolean[] visitados = new boolean[lv.tamanio()];
 
-        if ((!buscarDestino(ciudad1)) | (!buscarOrigen(ciudad1)))
-            return camino;
-
         Vertice<String> v;
         lv.comenzar();
         while (!lv.fin()) {
@@ -193,16 +190,18 @@ public class Mapa {
             ListaGenerica<Arista<String>> la = mapaCiudades.listaDeAdyacentes(v);
             Vertice<String> u;
             Arista<String> a;
+            int pesoActual;
             la.comenzar();
             while (!la.fin()) {
                 a = la.proximo();
                 u = a.verticeDestino();
-                if (!visitados[u.getPosicion() - 1])
-                    caminoMasCorto(u, visitados, camino, actual, ciudad1, ciudad2, pesoMin, peso + a.peso());
+                pesoActual = peso + a.peso();
+                if (!visitados[u.getPosicion() - 1]  && (pesoActual < pesoMin))
+                    caminoMasCorto(u, visitados, camino, actual, ciudad1, ciudad2, pesoMin, pesoActual);
             }
         }
         // Retorno
-        actual.eliminarEn(v.getPosicion());
+        actual.eliminarEn(actual.tamanio());
         visitados[v.getPosicion()] = false;
     }
 
